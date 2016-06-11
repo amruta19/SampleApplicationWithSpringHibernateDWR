@@ -34,38 +34,17 @@ public class UserDAO {
 	}  
 	//method to return all employees  
 	public List< User> getUsers(String userNameLike){  
-		/*List<User> list=new ArrayList<User>();  
-	    list=template.loadAll(User.class);  */
+	
 	    
 		//give table name in capital
 		String query="from User u where u.username like:username";
 		List<User> userList = getTemplate().findByNamedParam(query, "username", '%' + userNameLike + '%');
 		
-		 //List<Object[]> userList = new ArrayList<Object[]>();
-//	     String query = "from user";
-//	     //Object[] queryParam = {userNameLike};
-//	     list = template.find(query);
 	     return userList;
 	}
 
 	public List getReport(int user_id, String sDate, String eDate) {
 		// TODO Auto-generated method stub
-		/*SimpleDateFormat format= new SimpleDateFormat("yyyy-MM-dd");
-		Object  date1 = null,date2 = null;
-		try {
-			date1 = format.parse(sDate);
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		try {
-		 date2 = format.parse(eDate);
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		*/
 		String order="asc";
 		String order_by="name",sort_param = null;
 		String query="select p.provider_id,p.provider_name,sum(s.count) from Stats s,User u,Provider p where s.provider_id=p.provider_id and s.user_id=u.user_id and u.user_id=? and s.date >=? and s.date<=? group by(p.provider_name) order by";
