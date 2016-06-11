@@ -42,7 +42,7 @@
     <property name="sessionFactory" ref="mysessionFactory"></property>  
     </bean>  
       
-    <bean id="d" class="com.gslab.dwr.UserDAO">  
+    <bean id="d" class="com.amruta.dwr.UserDAO">  
     <property name="template" ref="template"></property>  
     </bean>  
       
