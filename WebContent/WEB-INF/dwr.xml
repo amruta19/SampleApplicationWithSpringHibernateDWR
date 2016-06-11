@@ -6,10 +6,10 @@
 	
 	<dwr>
 	  <allow>
-	  <convert converter="bean" match="com.gslab.dwr.User"/>
-	  <convert converter="bean" match="com.gslab.dwr.Report"/>
+	  <convert converter="bean" match="com.amruta.dwr.User"/>
+	  <convert converter="bean" match="com.amruta.dwr.Report"/>
 	    <create creator="new" javascript="Demo">
-	      <param name="class" value="com.gslab.dwr.MainApplication"/>
+	      <param name="class" value="com.amruta.dwr.MainApplication"/>
 	    </create>
 	  </allow> 
 	</dwr>
