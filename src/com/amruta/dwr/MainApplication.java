@@ -19,11 +19,6 @@ public class MainApplication{
 		      
 		    UserDAO dao=(UserDAO)factory.getBean("d");  
 		      
-		    //User u=new User();  
-		  /* u.setUser_id(4);
-		   u.setUsername("Abcd");*/
-		      
-		    //dao.saveUser(u);
 		   
 		    
 	      
@@ -63,7 +58,6 @@ public class MainApplication{
 		  
 		  return list;
 		 
-		  //return list;
        
 	      
 	  }    
